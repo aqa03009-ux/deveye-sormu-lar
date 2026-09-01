@@ -26,6 +26,7 @@ const config = {
     { name: "Instagram", icon: "instagram", url: "https://www.instagram.com/ech_oq0?igsh=eXB6amsyN2VwdGFz" },
     { name: "TikTok",    icon: "tiktok",    url: "https://www.tiktok.com/@ech_oq0" },
     { name: "X",         icon: "x",         url: "https://x.com/ech_oq" },
+    { name: "Discord",   icon: "discord",   url: "https://discord.gg/m5u7hWbmaF" },
     { name: "Pinterest", icon: "pinterest", url: "https://pin.it/uUZ3xYxkx" }
   ],
 
