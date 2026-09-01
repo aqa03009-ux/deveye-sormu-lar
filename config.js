@@ -5,7 +5,7 @@
 const config = {
 
   /* Kullanıcı adı (başlıktaki etiket) */
-  username: "@user",
+  username: "@ech_oq0",
 
   /* Kısa tanıtım metni */
   bio: "Hi! Welcome to my little corner of the internet.",
@@ -15,19 +15,18 @@ const config = {
      - gerçek fotoğraf kullanmak için: fotoğrafı bu klasöre at
        ve image alanına dosya adını yaz, emoji'yi "" yap */
   avatar: {
-    emoji: "🗿",
-    image: ""            /* ör: "foto.jpg" */
+    emoji: "",
+    image: "pfp.jpg"
   },
 
   /* Sosyal medya butonları — ekle/çıkar/sırala.
      Kullanılabilir ikonlar: instagram, tiktok, x, discord,
      pinterest, youtube, github, telegram, whatsapp, globe */
   socials: [
-    { name: "Instagram", icon: "instagram", url: "https://instagram.com/kullanici" },
-    { name: "TikTok",    icon: "tiktok",    url: "https://tiktok.com/@kullanici" },
-    { name: "X",         icon: "x",         url: "https://x.com/kullanici" },
-    { name: "Discord",   icon: "discord",   url: "https://discord.com/" },
-    { name: "Pinterest", icon: "pinterest", url: "https://pinterest.com/kullanici" }
+    { name: "Instagram", icon: "instagram", url: "https://www.instagram.com/ech_oq0?igsh=eXB6amsyN2VwdGFz" },
+    { name: "TikTok",    icon: "tiktok",    url: "https://www.tiktok.com/@ech_oq0" },
+    { name: "X",         icon: "x",         url: "https://x.com/ech_oq" },
+    { name: "Pinterest", icon: "pinterest", url: "https://pin.it/uUZ3xYxkx" }
   ],
 
   /* Sözler — kutuya tıklayınca rastgele sıradaki gelir */
@@ -36,8 +35,8 @@ const config = {
   ],
 
   /* Alt bilgi */
-  email: "example@email.com",
-  location: "Istanbul, Türkiye",
+  email: "echoyank0105@gmail.com",
+  location: "Turkey",
   year: 2026,
 
   /* Sekme başlığı */
