@@ -83,12 +83,12 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: clamp(16px, 4vh, 56px) 24px;
+  padding: clamp(10px, 2.5vh, 30px) 24px;
 }
 
 .profile {
   width: 100%;
-  max-width: 1100px;
+  max-width: min(1400px, 94vw);
   border-left: var(--line) solid var(--ink);
   padding-left: clamp(16px, 5vw, 48px);
 }
@@ -99,7 +99,7 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 0;
-  margin-bottom: clamp(20px, 5vh, 52px);
+  margin-bottom: clamp(24px, 7vh, 90px);
 }
 
 .user-tab {
@@ -121,7 +121,7 @@ body {
   position: relative;
   z-index: 2;
   flex-shrink: 0;
-  width: clamp(115px, min(14vw, 17vh), 195px);
+  width: clamp(130px, min(16vw, 24vh), 260px);
   aspect-ratio: 1;
   margin-top: clamp(14px, 2.5vh, 30px);
   margin-left: -12px;
@@ -153,13 +153,16 @@ body {
   background: var(--paper);
   border: var(--line) solid var(--ink);
   border-radius: 10px 18px 12px 16px / 16px 10px 18px 12px;
-  padding: clamp(14px, 2.5vh, 26px) 30px clamp(14px, 2.5vh, 26px) 60px;
+  min-height: clamp(120px, 24vh, 260px);
+  padding: clamp(14px, 2.5vh, 30px) 36px clamp(14px, 2.5vh, 30px) 70px;
+  display: flex; align-items: center;
   transform: rotate(.4deg);
   box-shadow: 5px 6px 0 var(--shadow);
 }
 
 .info {
-  font-size: clamp(.95rem, 2vh, 1.15rem);
+  flex: 1;
+  font-size: clamp(1rem, 2.2vh, 1.3rem);
   color: var(--muted);
   line-height: 1.6;
 }
@@ -169,8 +172,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: clamp(10px, 2vh, 20px) 16px;
-  margin-bottom: clamp(20px, 5vh, 52px);
+  gap: clamp(10px, 2.5vh, 28px) 16px;
+  margin-bottom: clamp(24px, 7vh, 90px);
 }
 
 .social-btn {
@@ -185,8 +188,8 @@ body {
   background: var(--paper);
   border: var(--line) solid var(--ink);
   border-radius: 50px 44px 52px 46px / 46px 52px 44px 50px;
-  padding: 12px 22px;
-  font-size: .95rem;
+  padding: clamp(10px, 2vh, 20px) 26px;
+  font-size: clamp(.9rem, 2vh, 1.15rem);
   font-weight: 700;
   box-shadow: 3px 4px 0 var(--shadow);
   transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
@@ -208,8 +211,8 @@ body {
   background: var(--paper);
   border: var(--line) solid var(--ink);
   border-radius: 14px 8px 16px 10px / 8px 16px 10px 14px;
-  padding: clamp(16px, 4vh, 38px) 28px;
-  margin-bottom: 10px;
+  padding: clamp(20px, 6vh, 64px) 32px;
+  margin-bottom: clamp(8px, 2vh, 16px);
   box-shadow: 5px 6px 0 var(--shadow);
   text-align: center;
 }
@@ -225,7 +228,7 @@ body {
   background: var(--paper);
   border: var(--line) solid var(--ink);
   border-radius: 8px 14px 10px 12px / 12px 10px 14px 8px;
-  padding: 12px 22px;
+  padding: clamp(10px, 2.5vh, 22px) 22px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -273,6 +276,7 @@ body {
   .info-box {
     margin: -26px 0 0; width: 100%;
     padding: 40px 20px 20px; text-align: center;
+    min-height: 0; display: block;
     transform: rotate(0);
   }
 
