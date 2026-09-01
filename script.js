@@ -12,12 +12,12 @@ const icons = {
 };
 
 function render() {
-  document.title = config.pageTitle || "Profil";
+  document.title = config.pageTitle || "Profile";
 
   /* avatar */
   const wrap = document.getElementById('pfpWrap');
   if (config.avatar.image) {
-    wrap.innerHTML = `<img src="${config.avatar.image}" alt="Profil fotoğrafı" class="pfp" id="pfp">`;
+    wrap.innerHTML = `<img src="${config.avatar.image}" alt="Profile picture" class="pfp" id="pfp">`;
   } else {
     wrap.innerHTML = `<div class="pfp" id="pfp">${config.avatar.emoji}</div>`;
   }
@@ -39,7 +39,7 @@ function render() {
     mottoEl.textContent = mottos[0];
     if (mottos.length > 1) {
       mottoEl.style.cursor = 'pointer';
-      mottoEl.title = 'Değiştirmek için tıkla';
+      mottoEl.title = 'Click to change';
       mottoEl.addEventListener('click', () => {
         let next;
         do { next = Math.floor(Math.random() * mottos.length); }
@@ -73,7 +73,7 @@ const themeBtn = document.getElementById('themeBtn');
 const mqDark = window.matchMedia('(prefers-color-scheme: dark)');
 
 function currentTheme() {
-  return localStorage.getItem('tema') || (mqDark.matches ? 'dark' : 'light');
+  return localStorage.getItem('theme') || (mqDark.matches ? 'dark' : 'light');
 }
 
 function applyTheme() {
@@ -84,12 +84,12 @@ function applyTheme() {
 
 themeBtn.addEventListener('click', () => {
   const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-  localStorage.setItem('tema', next);
+  localStorage.setItem('theme', next);
   applyTheme();
 });
 
 mqDark.addEventListener('change', () => {
-  if (!localStorage.getItem('tema')) applyTheme();
+  if (!localStorage.getItem('theme')) applyTheme();
 });
 
 applyTheme();

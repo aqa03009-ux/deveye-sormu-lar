@@ -8,7 +8,7 @@ const config = {
   username: "@user",
 
   /* Kısa tanıtım metni */
-  bio: "Merhaba! Burası benim profil sayfam.",
+  bio: "Hi! Welcome to my little corner of the internet.",
 
   /* Profil resmi:
      - emoji kullanmak için: emoji alanını değiştir (🗿, 😎, 🦊 ...)
@@ -32,17 +32,14 @@ const config = {
 
   /* Sözler — kutuya tıklayınca rastgele sıradaki gelir */
   mottos: [
-    '"Azim, yeteneği yener; çalışkan, yeteneksizi her zaman geçer."',
-    '"Yapamıyorum deme, denemeyi bırakma."',
-    '"Sabır acıdır, fakat meyvesi tatlıdır."',
-    '"En güzel hayaller, en cesur zihinlerde doğar."'
+    '"Earth without art is just ‘Eh’."'
   ],
 
   /* Alt bilgi */
-  email: "ornek@eposta.com",
-  location: "İstanbul, Türkiye",
+  email: "example@email.com",
+  location: "Istanbul, Türkiye",
   year: 2026,
 
   /* Sekme başlığı */
-  pageTitle: "Profil"
+  pageTitle: "Profile"
 };
