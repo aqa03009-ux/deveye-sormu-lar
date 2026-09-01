@@ -8,7 +8,7 @@ const config = {
   username: "@ech_oq0",
 
   /* Kısa tanıtım metni */
-  bio: "Hi! Welcome to my little corner of the internet.",
+  bio: "16 y/o digital artist, specializing in character design and anime aesthetics. Open for commissions and custom illustrations\u2014check out my work and contact details via the links below.",
 
   /* Profil resmi:
      - emoji kullanmak için: emoji alanını değiştir (🗿, 😎, 🦊 ...)
