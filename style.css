@@ -79,8 +79,11 @@ body {
 
 .page {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding: 48px 20px;
+  align-items: center;
+  min-height: 100vh;
+  padding: clamp(16px, 4vh, 56px) 24px;
 }
 
 .profile {
@@ -96,7 +99,7 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 0;
-  margin-bottom: 44px;
+  margin-bottom: clamp(20px, 5vh, 52px);
 }
 
 .user-tab {
@@ -108,7 +111,7 @@ body {
   border: var(--line) solid var(--ink);
   border-radius: 14px 10px 16px 8px / 10px 16px 8px 14px;
   padding: 8px 26px;
-  font-size: 1.3rem;
+  font-size: clamp(1.05rem, 2.2vh, 1.4rem);
   font-weight: 700;
   transform: rotate(1.2deg);
   box-shadow: 4px 4px 0 var(--shadow);
@@ -118,9 +121,9 @@ body {
   position: relative;
   z-index: 2;
   flex-shrink: 0;
-  width: 150px;
-  height: 150px;
-  margin-top: 28px;
+  width: clamp(115px, min(14vw, 17vh), 195px);
+  aspect-ratio: 1;
+  margin-top: clamp(14px, 2.5vh, 30px);
   margin-left: -12px;
 }
 
@@ -128,7 +131,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 72px;
+  font-size: clamp(52px, 8vh, 92px);
   line-height: 1;
   background: var(--avatar-bg);
   width: 100%;
@@ -145,19 +148,18 @@ body {
 
 .info-box {
   flex: 1;
-  margin-top: 42px;
+  margin-top: clamp(20px, 3.5vh, 42px);
   margin-left: -26px;
   background: var(--paper);
   border: var(--line) solid var(--ink);
   border-radius: 10px 18px 12px 16px / 16px 10px 18px 12px;
-  padding: 26px 30px 26px 60px;
-  min-height: 120px;
+  padding: clamp(14px, 2.5vh, 26px) 30px clamp(14px, 2.5vh, 26px) 60px;
   transform: rotate(.4deg);
   box-shadow: 5px 6px 0 var(--shadow);
 }
 
 .info {
-  font-size: 1.05rem;
+  font-size: clamp(.95rem, 2vh, 1.15rem);
   color: var(--muted);
   line-height: 1.6;
 }
@@ -167,8 +169,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 18px 16px;
-  margin-bottom: 44px;
+  gap: clamp(10px, 2vh, 20px) 16px;
+  margin-bottom: clamp(20px, 5vh, 52px);
 }
 
 .social-btn {
@@ -206,14 +208,14 @@ body {
   background: var(--paper);
   border: var(--line) solid var(--ink);
   border-radius: 14px 8px 16px 10px / 8px 16px 10px 14px;
-  padding: 34px 28px;
+  padding: clamp(16px, 4vh, 38px) 28px;
   margin-bottom: 10px;
   box-shadow: 5px 6px 0 var(--shadow);
   text-align: center;
 }
 
 .motto {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.5vh, 1.35rem);
   line-height: 1.7;
   font-style: italic;
 }
@@ -250,15 +252,10 @@ body {
 
 /* ---------- geniş ekran ---------- */
 @media (min-width: 1200px) {
-  html { font-size: 19px; }
-  .pfp-wrap { width: 200px; height: 200px; margin-top: 36px; }
-  .pfp { font-size: 96px; }
-  .user-tab { font-size: 1.5rem; padding: 10px 32px; }
-  .info-box { padding: 32px 36px 32px 76px; min-height: 150px; }
-  .motto-box { padding: 44px 36px; }
-  .motto { font-size: 1.35rem; }
-  .profile-header { margin-bottom: 56px; }
-  .socials { margin-bottom: 56px; }
+  html { font-size: 18px; }
+  .pfp-wrap { width: min(18vw, 190px); }
+  .user-tab { padding: 9px 30px; }
+  .info-box { padding-left: 72px; }
 }
 
 /* ---------- mobil ---------- */
@@ -272,7 +269,7 @@ body {
     margin: 0 auto 18px; display: inline-block;
     transform: rotate(0);
   }
-  .pfp-wrap { width: 120px; height: 120px; margin: 0; }
+  .pfp-wrap { width: 115px; margin: 0; }
   .info-box {
     margin: -26px 0 0; width: 100%;
     padding: 40px 20px 20px; text-align: center;
