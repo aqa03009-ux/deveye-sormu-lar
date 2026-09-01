@@ -66,3 +66,31 @@ function render() {
 }
 
 render();
+
+/* ---------- tema ---------- */
+const root = document.documentElement;
+const themeBtn = document.getElementById('themeBtn');
+const mqDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+function currentTheme() {
+  return localStorage.getItem('tema') || (mqDark.matches ? 'dark' : 'light');
+}
+
+function applyTheme() {
+  const t = currentTheme();
+  root.setAttribute('data-theme', t);
+  themeBtn.textContent = t === 'dark' ? '☀' : '☾';
+}
+
+themeBtn.addEventListener('click', () => {
+  const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  localStorage.setItem('tema', next);
+  applyTheme();
+});
+
+mqDark.addEventListener('change', () => {
+  if (!localStorage.getItem('tema')) applyTheme();
+});
+
+applyTheme();
+
